@@ -1,6 +1,7 @@
 package com.randycasburn.thing.services;
 
 import com.randycasburn.thing.business.Thing;
+import com.randycasburn.thing.controllers.ThingController;
 import com.randycasburn.thing.integration.ThingDao;
 import com.randycasburn.thing.integration.ThingDatabaseException;
 import org.junit.jupiter.api.BeforeEach;
@@ -8,15 +9,22 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.dao.DuplicateKeyException;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.slf4j.Logger;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.when;
 
+@SpringBootTest
 class ThingServiceTests {
+    @Mock
+    private Logger logger;
+
     @Mock
     private ThingDao mockDao;
 

@@ -90,7 +90,7 @@ public class ThingControllerTest {
                 .content(new ObjectMapper().writeValueAsString(testThings.get(0)))
                 .contentType(MediaType.APPLICATION_JSON))
                 .andDo(print())
-                .andExpect(status().isBadRequest());
+                .andExpect(status().isNotFound());
 
     }
     @Test
