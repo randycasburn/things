@@ -1,7 +1,7 @@
 package com.randycasburn.thing.controllers;
 
 import com.randycasburn.thing.business.Thing;
-import com.randycasburn.thing.services.DatabaseRequestResult;
+import com.randycasburn.thing.business.RowCount;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -47,7 +47,7 @@ class EndToEndTests {
     public void addThing(){
         HttpEntity<Thing> request = new HttpEntity<>(new Thing(16, "Thingy"));
         String requestUrl = "/things";
-        ResponseEntity<DatabaseRequestResult> response = restTemplate.postForEntity(requestUrl, request, DatabaseRequestResult.class);
+        ResponseEntity<RowCount> response = restTemplate.postForEntity(requestUrl, request, RowCount.class);
         assertEquals(HttpStatus.OK, response.getStatusCode());
         assertEquals(1, response.getBody().getRowCount() );
     }

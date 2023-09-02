@@ -1,9 +1,9 @@
-package com.randycasburn.thing.services;
-public class DatabaseRequestResult {
+package com.randycasburn.thing.business;
+public class RowCount {
 
 	private int rowCount = -1;
-	public DatabaseRequestResult(){}
-	public DatabaseRequestResult(int rowCount) {
+	public RowCount(){}
+	public RowCount(int rowCount) {
 		this.rowCount = rowCount;
 	}
 	public int getRowCount(){
