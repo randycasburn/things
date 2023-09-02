@@ -6,7 +6,7 @@ See [STAGING](./STAGING.MD) for building Docker images for dev, stage, productio
 
 See [DEPLOYMENT](./DEPLOYMENT.MD) for instructions on deploying the production build to [Render.com](https://render.com)
 
-See [Coverage Report](https://raw.github.com/randycasburn/things/tree/main/coverageReport)  -100% Code Coverage
+See [Coverage Report](https://randycasburn.com/things/)  -100% Code Coverage
 #### To change DB backends: 
 - change the *.properties files where necessary.
 - add the Maven dependency for your DB
