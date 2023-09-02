@@ -69,7 +69,7 @@ public class ThingController {
         int rows = 0;
         try {
             rows = service.removeThing(id);
-            logger.info("removing a thing");
+            logger.info("removing a thing with id: " + id);
         } catch (ThingDatabaseException e) {
             logger.error(DB_ERROR_MSG);
             throw new ServerErrorException(DB_ERROR_MSG, e);
@@ -92,7 +92,7 @@ public class ThingController {
             logger.error(DB_ERROR_MSG);
             throw new ServerErrorException(DB_ERROR_MSG, e);
         }
-        if (count == 0) {
+        if(w.getName() == null || count == 0) {
             logger.error("Did not insert from removeThing() Name:" +  w.getName());
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST);
         }
