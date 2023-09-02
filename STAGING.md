@@ -8,13 +8,13 @@ Each docker file sets a different `spring.profiles.active` environment variable 
 
 To build docker images for dev, staging, production, use the following docker CLI commands:
 
-- `docker build -t thing -f Dockerfile.local.dev`
-- `docker build -t thing -f Dockerfile.local.stage`
-- `docker build -t thing -f Dockerfile.render.prod`
+- `docker build -t things -f Dockerfile.local.dev`
+- `docker build -t things -f Dockerfile.local.stage`
+- `docker build -t things -f Dockerfile.render.prod`
 
 Once built, to run on port 80, execute: (choose any port you want)
 
-`docker run -p 80:8080 thing`
+`docker run -p 80:8080 things`
 
 Maven Profiles: (default 'dev')
 - **'dev'** - local development, local DB connection

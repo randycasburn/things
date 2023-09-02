@@ -6,7 +6,7 @@
 * Don't forget the appropriate/correct annotations (Especially in test classes)
 * If you cannot debug/fix an issue MOVE ON!:  make comments in the file to let me know your efforts
     * You may have time to come back to fix later
-* Log each unique exception prior to throwing
+* Log each _controller_ unique exception prior to throwing
     * Just need to demonstrate that you've considered this important task
 * Create constants for error messages and other "magic strings" and "magic numbers"
 * Validate ALL input received by the controller mappings

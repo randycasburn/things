@@ -8,7 +8,7 @@
    2. Modify the `application-render-prod.properties` file url property:
       1. URLs must be in the form: `jdbc:postgresql://[hostname]:5432/[dbName]`
       2. Retrieve the `[hostname]` and `[dbName]` from your Render dashboard
-      3. The `Internal Database URL` is used within `render-prod.properties`
+      3. The `External Database URL` is used within `render-prod.properties`
       4. The `External Database URL` is used within `docker-stage.properties`
       5. **_DO NOT_** copy and paste the URLs - they are in the wrong format
 3. Click the blue **_New+_** button and **_Web Service_**
