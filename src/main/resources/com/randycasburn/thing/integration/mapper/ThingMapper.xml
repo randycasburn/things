@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- The namespace defines the location of the Java interface. -->
+<!-- The operation names here must match the method names in the interface. -->
+<mapper namespace="com.randycasburn.thing.integration.mapper.ThingMapper">
+
+	<!-- Thing Operations -->
+	<select id="getAllThings" resultType="Thing">
+		SELECT id, name
+		from things
+		order by id
+	</select>
+
+	<select id="getThing" parameterType="int" resultType="Thing">
+		SELECT id, name
+		from
+		things
+		where id = #{id}
+		order by id
+	</select>
+
+	<delete id="deleteThing" parameterType="int">
+		delete from things
+		where id = #{value}
+	</delete>
+
+	<update id="updateThing" parameterType="Thing">
+		update things
+		set
+		name = #{name},
+		where id = #{id}
+	</update>
+
+	<insert id="insertThing" parameterType="Thing">
+		insert into things
+		(id, name)
+		values
+		(#{id}, #{name})
+	</insert>
+</mapper>
