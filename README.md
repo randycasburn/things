@@ -1,4 +1,5 @@
 ![Build & Unit Test](https://github.com/randycasburn/things/actions/workflows/maven.yml/badge.svg)
+[![CodeQL](https://github.com/randycasburn/things/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/randycasburn/things/actions/workflows/codeql.yml)
 ## things project
 
 ### A PostgreSQL + MyBatis + Docker project
