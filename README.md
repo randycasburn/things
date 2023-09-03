@@ -1,3 +1,4 @@
+![Build & Unit Test](https://github.com/randycasburn/things/actions/workflows/maven.yml/badge.svg)
 ## things project
 
 ### A PostgreSQL + MyBatis + Docker project
