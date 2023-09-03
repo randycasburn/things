@@ -15,7 +15,7 @@ import static org.springframework.test.jdbc.JdbcTestUtils.countRowsInTableWhere;
 
 @SpringBootTest
 @Transactional
-class ThingServiceIntegrationTest {
+class ThingServiceIntegrationTests {
     @Autowired
     private ThingDao dao;
     @Autowired
