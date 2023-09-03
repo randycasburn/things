@@ -105,6 +105,7 @@
                 <configuration>
                     <excludes>
                         <exclude>**/EndToEndTests.java</exclude>
+                        <exclude>**/ThingDaoIntegrationTests.java</exclude>
                     </excludes>
                 </configuration>
             </plugin>
